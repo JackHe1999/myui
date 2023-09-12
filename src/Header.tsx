@@ -10,14 +10,14 @@ const Header = () => {
   const path = ''
 
   const navs = [
-    { path: '/index/', en: 'Home', cn: '首页' },
+    { path: '/', en: 'Home', cn: '首页' },
     { path: '/components/GetStart', en: 'Components', cn: '组件' },
   ]
 
   return (
     <div className={headerClass('_')}>
       <div className={headerClass('logo')}>
-        <Link to="/index/">{logo}</Link>
+        <Link to="/">{logo}</Link>
       </div>
       <div className={headerClass('nav')}>
         {navs.map(nav => (

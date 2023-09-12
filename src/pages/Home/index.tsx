@@ -1,13 +1,13 @@
 import React from "react";
 import history from "../../history";
 import { homeClass } from "../../styles";
-import { Button } from "../../mycomponents";
+import Button from "../../mycomponents/Button";
 import Icon from "../../icons/Icon";
 
 const Home = () => {
 
   const start = () => {
-    history.push('/components/GetStart');
+    history.push('/components/Button');
   };
 
   return (

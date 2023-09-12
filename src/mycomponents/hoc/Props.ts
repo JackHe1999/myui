@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { ForceAdd, PartialKeys, RegularAttributes, StandardProps } from '../@types/common'
-// import { PopoverProps, PopoverPositionType } from '../Popover/Props'
-// import { PaginationProps } from '../Pagination/Props'
+import { PopoverProps, PopoverPositionType } from '../Popover/Props'
+import { PaginationProps } from '../Pagination/Props'
 
 export type MovableType<U> = U & {
   /**
@@ -24,80 +24,80 @@ export type ResizableType<Props> = Props & {
 export type ConfigType<Props> = Props
 
 /** ------ inputBorder ------ * */
-// export interface InputBorderProps extends StandardProps {
-//   /**
-//    * @en Prompt information
-//    * @cn 提示信息
-//    */
-//   tip?: ReactNode
-//   /**
-//    * @en The position where the validation info pop up, see [Popover](/components/Popover)
-//    * @cn 校验信息弹出位置，参考 [Popover](/components/Popover)
-//    * @override PopoverProps["position"]
-//    */
-//   popover?: PopoverPositionType
-//   /**
-//    * @en input width
-//    * @cn 输入框宽度
-//    */
-//   width?: string | number
-//   /**
-//    * @inner 内部属性
-//    */
-//   error?: Error
-//   /**
-//    * @en Vilidate popup properties, specific properties refer to [Popover](/components/Popover)
-//    * @cn 校验弹框接受的属性，具体属性参考 [Popover](/components/Popover)
-//    * @type PopoverProps
-//    */
-//   popoverProps?: PopoverProps
-//   /**
-//    * @en only display border bottom
-//    * @cn 是否只展示下边框
-//    * @default false
-//    */
-//   underline?: boolean
-//   /**
-//    * @en Whether to automatically get the focus
-//    * @cn 是否自动获得焦点
-//    * @default false
-//    */
-//   autoFocus?: boolean
-//   /**
-//    * @en Whether to display border
-//    * @cn 是否展示边框
-//    * @default false
-//    */
-//   border?: boolean
-//   /**
-//    * @en disabled
-//    * @cn 是否禁用
-//    * @default false
-//    */
-//   disabled?: boolean
-//   /**
-//    * @en callback function for blur event
-//    * @cn blur 事件回调函数
-//    */
-//   onBlur?: React.FocusEventHandler
-//   /**
-//    * @en callback function for blur focus
-//    * @cn focus 事件回调函数
-//    */
-//   onFocus?: React.FocusEventHandler
-//   /**
-//    * @en size
-//    * @cn 尺寸
-//    * @default "default"
-//    * @override union
-//    */
-//   size?: RegularAttributes.Size
-// }
+export interface InputBorderProps extends StandardProps {
+  /**
+   * @en Prompt information
+   * @cn 提示信息
+   */
+  tip?: ReactNode
+  /**
+   * @en The position where the validation info pop up, see [Popover](/components/Popover)
+   * @cn 校验信息弹出位置，参考 [Popover](/components/Popover)
+   * @override PopoverProps["position"]
+   */
+  popover?: PopoverPositionType
+  /**
+   * @en input width
+   * @cn 输入框宽度
+   */
+  width?: string | number
+  /**
+   * @inner 内部属性
+   */
+  error?: Error
+  /**
+   * @en Vilidate popup properties, specific properties refer to [Popover](/components/Popover)
+   * @cn 校验弹框接受的属性，具体属性参考 [Popover](/components/Popover)
+   * @type PopoverProps
+   */
+  popoverProps?: PopoverProps
+  /**
+   * @en only display border bottom
+   * @cn 是否只展示下边框
+   * @default false
+   */
+  underline?: boolean
+  /**
+   * @en Whether to automatically get the focus
+   * @cn 是否自动获得焦点
+   * @default false
+   */
+  autoFocus?: boolean
+  /**
+   * @en Whether to display border
+   * @cn 是否展示边框
+   * @default false
+   */
+  border?: boolean
+  /**
+   * @en disabled
+   * @cn 是否禁用
+   * @default false
+   */
+  disabled?: boolean
+  /**
+   * @en callback function for blur event
+   * @cn blur 事件回调函数
+   */
+  onBlur?: React.FocusEventHandler
+  /**
+   * @en callback function for blur focus
+   * @cn focus 事件回调函数
+   */
+  onFocus?: React.FocusEventHandler
+  /**
+   * @en size
+   * @cn 尺寸
+   * @default "default"
+   * @override union
+   */
+  size?: RegularAttributes.Size
+}
 
-// export type GetInputBorderProps<Props extends { onFocus?: any; onBlur?: any }> = ForceAdd<
-//   Omit<PartialKeys<Props, 'onFocus' | 'onBlur'>, 'inputFocus'>,
-//   InputBorderProps
-// >
+export type GetInputBorderProps<Props extends { onFocus?: any; onBlur?: any }> = ForceAdd<
+  Omit<PartialKeys<Props, 'onFocus' | 'onBlur'>, 'inputFocus'>,
+  InputBorderProps
+>
 
 /** ------ delay ------ * */
 export interface DelayProps {
@@ -143,10 +143,10 @@ export type GetCoinProps<Props extends { onFocus?: any; onBlur?: any }> = ForceA
 export type GetHidableConsumerProps<Props> = Props
 
 /** ------ pagable ------ * */
-// export type GetPagableProps<Props> = Props & {
-//   /**
-//    * @en Show pagination See [Pagination](/components/Pagination) for details
-//    * @cn 展示分页 详见 [Pagination](/components/Pagination)
-//    */
-//   pagination?: PaginationProps
-// }
+export type GetPagableProps<Props> = Props & {
+  /**
+   * @en Show pagination See [Pagination](/components/Pagination) for details
+   * @cn 展示分页 详见 [Pagination](/components/Pagination)
+   */
+  pagination?: PaginationProps
+}

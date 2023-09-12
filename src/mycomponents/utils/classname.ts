@@ -1,12 +1,12 @@
 import classnames from 'classnames'
 import { CSSProperties } from 'react'
-import config from '../config'
+import config, { isRTL } from '../config'
 
 interface CSSModule {
   [key: string]: string
 }
 
-// export const getDirectionClass = (c: string) => `${c} ${c}-${isRTL() ? 'rtl' : 'ltr'}`
+export const getDirectionClass = (c: string) => `${c} ${c}-${isRTL() ? 'rtl' : 'ltr'}`
 
 /**
  * create a new className generate function, add namespace, handle css module

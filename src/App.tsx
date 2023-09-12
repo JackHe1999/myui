@@ -7,9 +7,9 @@ import { mainClass } from './styles'
 import Loading from './Components/Loading';
 
 const Home = lazy(() => import('./pages/Home'));
+const Components = lazy(() => import('./chunks/Components'))
 
 function App() {
-
 
   return (
     <Router history={history}>
@@ -18,9 +18,9 @@ function App() {
         <div className={mainClass('body')}>
           <Suspense fallback={<Loading/>}>
             <Switch>
-              <Route exact path="/index" component={Home} />
-              {/* <Route path="/components" component={Components} />
-              <Route path="/documentation" component={Documentation} /> */}
+              <Route exact path="/" component={Home} />
+              <Route path="/components" component={Components} />
+              {/* <Route path="/documentation" component={Documentation} /> */}
             </Switch>
           </Suspense>
         </div>
